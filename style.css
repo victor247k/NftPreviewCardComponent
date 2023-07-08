@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --clr-primary-softblue: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%); 
+
+    --clr-neutral-mainBG: hsl(217, 54%, 11%);
+    --clr-neutral-cardBG: hsl(216, 50%, 16%);
+    --clr-neutral-line: hsl(215, 32%, 27%);
+    --clr-white: white;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--clr-neutral-mainBG);
+    display: grid;
+    place-items: center;
+    font-weight: 400;
+}
+.component {
+    background-color: var(--clr-neutral-cardBG);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 350px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 20px 0px 10px hsl(217, 54%, 10%), 0px 15px 0px 10px hsl(217, 54%, 10.5%);
+}
+h2 a {
+    color: var(--clr-white);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 150ms;
+}
+h2 a:hover {
+    color: var(--clr-primary-cyan);
+}
+.description {
+    color: var(--clr-primary-softblue);
+    margin-bottom: 1rem;
+}
+.price {
+    color: var(--clr-primary-cyan);
+}
+.time {
+    color: var(--clr-primary-softblue);
+}
+.time, .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-neutral-line);
+    padding-bottom: 1rem;
+}
+.creator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* height: 50px; */
+    /* padding: 1rem 0; */
+    margin: 1rem 0 0;
+    gap: 1rem;
+    color: var(--clr-primary-softblue);
+}
+.creator p a {
+    transition: 150ms;
+    margin-left: 0.1rem;
+    color: var(--clr-white);
+    font-weight: 300;
+    text-decoration: none;
+}
+.creator p a:hover {
+    color: var(--clr-primary-cyan);
+}
+.avatar {
+    aspect-ratio: 1;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-white);
+}
+
+.imageContainer {
+    background-color: var(--clr-primary-cyan);
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: 150ms;
+}
+
+.imageContainer:hover > .bg {
+    background-color: hsla(205, 100%, 65%, 0.4);
+    opacity: 1;
+}
+.imageContainer:hover .NFT {
+    transform: scale(1.2);
+}
+.NFT {
+    transition: 800ms;
+}
+.bg {
+    z-index: 10;
+    opacity: 0;
+    background-color: transparent;
+    inset: 0;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transition: 150ms;
+}
